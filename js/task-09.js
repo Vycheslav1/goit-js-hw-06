@@ -7,6 +7,8 @@ function getRandomHexColor() {
 
 const btn=document.querySelector(".widget button");
 
+const bodyBg=document.querySelector("body");
+
 const colorValue=document.querySelector(".color");
 
 let initialContent=colorValue.textContent;
@@ -14,5 +16,7 @@ let initialContent=colorValue.textContent;
 btn.addEventListener("click",()=>{
  
 colorValue.textContent=initialContent+getRandomHexColor();
+
+bodyBg.style.background=colorValue.textContent.replace("-","");
 
 });
